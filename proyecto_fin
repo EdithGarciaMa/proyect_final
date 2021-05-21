@@ -1,0 +1,11 @@
+from matplotlib import pyplot as plt
+import cv2
+import numpy as np
+%matplotlib inline
+
+noche_estrellada = cv2.imread('./Images/Noche_Estrellada.jpg')
+noche_estrellada_color = cv2.cvtColor(noche_estrellada, cv2.COLOR_BGR2RGB)
+#noche_estrellada_gray = cv2.cvtColor(imGirasol_color, cv2.COLOR_RGB2GRAY)
+
+plt.imshow(noche_estrellada_color, cmap='gray')
+print(noche_estrellada_color.shape)
